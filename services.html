@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rynapse - Services</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    
+    
+    <style>
+        .my-input-button {
+            background-color: yellow;
+            color: black; 
+            padding: 10px 20px; 
+            border-radius: 8px; 
+            border: none; 
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 5px; 
+        }
+        .my-input-button:hover {
+            background-color: #8B8000;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div style="text-align:center; margin-top:40px;">
+        <img style="width: 10%;" src="logo1.png" alt="Rynapse Logo">
+    </div>
+
+    <div style="text-align:center; margin-top:70px;">
+        <input 
+            type="button" 
+            value="Home" 
+            onclick="openNewSite('index.html')" 
+            class="my-input-button"
+        >
+        
+        <input 
+            type="button" 
+            value="About" 
+            onclick="openNewSite('about.html')" 
+            class="my-input-button"
+        >
+
+        <input 
+            type="button" 
+            value="Services" 
+            onclick="openNewSite('services.html')" 
+            class="my-input-button"
+        >
+    </div>
+
+    <script>
+        function openNewSite(fileName) {
+            window.open(fileName, '_blank'); 
+        }
+    </script>
+
+</body>
+</html>

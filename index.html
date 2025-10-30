@@ -5,6 +5,10 @@
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     
     <style>
+        body {
+            font-family: Arial, sans-serif; /* Setting the base font to Arial */
+        }
+        
         .visually-hidden {
             position: absolute;
             width: 1px;
@@ -17,40 +21,29 @@
         }
 
         /*
-         * STYLES FOR THE IMAGE BUTTONS
+         * STYLES FOR THE IMAGE BUTTONS (UNCHANGED)
          */
         .my-input-button {
-            /* Fixes padding and dimensions to be exactly 100x50 */
             box-sizing: border-box; 
             width: 100px;
             height: 50px;
-            
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: contain; /* Use 'contain' to fit image without cropping */
-            
+            background-size: contain; 
             cursor: pointer;
             position: relative;
-            
-            /* **CORRECTION**: Changed from 5s to 0.3s for a smooth, fast hover effect */
             transition: left 0.3s ease, top 0.3s ease, box-shadow 0.3s ease; 
-            
             box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
-            
-            /* Reduced padding, as image fills the button using background */
             padding: 0; 
             border-radius: 25px; 
             border: none;
-            
-            /* Add margin to separate buttons slightly */
             margin: 0 5px;
         }
         
         .my-input-button:hover {
-            /* Hover effect to move the button slightly up and left */
             left: -0.15cm;
             top: -0.15cm;
-            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5); 
         }
         
         /*
@@ -61,10 +54,7 @@
             border: none; 
             box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6);
             position: relative; 
-            
-            /* **CORRECTION**: Changed from 5s to 0.3s */
             transition: left 0.3s ease, top 0.3s ease, box-shadow 0.3s ease; 
-            
             margin-right: 7.5px;
             margin-left: 7.5px;
         }
@@ -72,14 +62,51 @@
         .movable-image:hover {
             left: -0.25cm;
             top: -0.25cm;
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7); 
         }
         
-        /* Basic font styling for a custom font if it exists */
+        /* Font styling for Rynapse H1 */
         .magz {
-            font-family: 'magz', sans-serif; /* Add a fallback font */
+            font-family: 'magz', Arial, sans-serif; 
+        }
+        
+        /* NEW FLEXBOX LAYOUT FOR THE TEXT */
+        .services-layout {
+            display: flex; 
+            justify-content: center; 
+            max-width: 980px; 
+            margin: 30px auto 0; /* Centering the text layout block */
+            padding: 0 10px;
+            gap: 15px; 
         }
 
+        /* Style for each individual text column */
+        .service-column {
+            width: 50%; 
+            text-align: left;
+            padding: 0 10px; 
+        }
+
+        .service-column h2 {
+            text-align: center; /* Center heading */
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .service-column p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 0;
+            color: #333; 
+        }
+
+        /* NEW: Centering the overall image+text block by setting a max width */
+        .media-and-text-container {
+            max-width: 980px; /* Same max-width as the .services-layout for alignment */
+            margin: 0 auto; /* Centers the whole block */
+            text-align: center; /* Ensures images are centered within this block */
+        }
     </style>
     
 </head>
@@ -124,11 +151,26 @@
     
     <br><br><br>
     
-    <div style="text-align:center;">
-        <img class="movable-image" style="width: 47.5%;" src="1 (2).png" alt="A descriptive image 1">
-        <img class="movable-image" style="width: 47.5%;" src="2 (2).png" alt="A descriptive image 2">
+    <div class="media-and-text-container">
+        
+        <div>
+            <img class="movable-image" style="width: 47.5%;" src="1 (2).png" alt="A descriptive image 1">
+            <img class="movable-image" style="width: 47.5%;" src="2 (2).png" alt="A descriptive image 2">
+        </div>
+
+        <div class="services-layout">
+            <div class="service-column">
+                <h2><b>Programming</b></h2>
+                <p>Beyond design, programming is the dedicated craft that transforms a static illustration into a dynamic, functional, and scalable digital asset. We write clean, secure, and future-proof code that serves as the invisible engine for your online success. Every line is an engineered solution, meticulously crafted to maximize user experience and deliver measurable impact for your business.</p>
+            </div>
+
+            <div class="service-column">
+                <h2><b>Design</b></h2>
+                <p>Design is the art of strategic illustration. It's the critical first step where we translate your brand's essence and your business goals into a clean, intuitive, and visually compelling experience. We obsess over aesthetics, usability, and accessibility, ensuring every pixel is placed with purpose. Our focus is on crafting designs that not only look stunning but that guide the user, build trust, and ultimately amplify the impact of your message in a crowded digital landscape.</p>
+            </div>
+        </div>
+
     </div>
-    
     <script>
         function openNewSite(fileName) {
             // Opens the specified file in the current browser window/tab

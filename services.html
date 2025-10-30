@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rynapse - Services</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    
+    
+    <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /*
+         * STYLES FOR THE IMAGE BUTTONS
+         */
+        .my-input-button {
+            /* Fixes padding and dimensions to be exactly 100x50 */
+            box-sizing: border-box; 
+            width: 100px;
+            height: 50px;
+            
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain; /* Use 'contain' to fit image without cropping */
+            
+            cursor: pointer;
+            position: relative;
+            
+            /* **CORRECTION**: Changed from 5s to 0.3s for a smooth, fast hover effect */
+            transition: left 0.3s ease, top 0.3s ease, box-shadow 0.3s ease; 
+            
+            box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+            
+            /* Reduced padding, as image fills the button using background */
+            padding: 0; 
+            border-radius: 25px; 
+            border: none;
+            
+            /* Add margin to separate buttons slightly */
+            margin: 0 5px;
+        }
+        
+        .my-input-button:hover {
+            /* Hover effect to move the button slightly up and left */
+            left: -0.15cm;
+            top: -0.15cm;
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div style="text-align:center; margin-top:40px;">
+        <img style="width: 10%;" src="logo1.png" alt="Rynapse Logo">
+    </div>
+    
+    <div style="text-align:center; margin-top;">
+        <h1 style="font-size:60px; color:black; font-family:magz;"><b>Rynapse</b></h1>
+        <h2>Imagine. Illustrate. Impact.</h2>
+    </div>
+
+    <div style="text-align:center; margin-top:70px;">
+        <button 
+            style="background-image: url('Home.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('index.html')"> 
+            <span class="visually-hidden">Home Page</span>
+        </button>
+        
+        <button 
+            style="background-image: url('About.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('about.html')">
+            <span class="visually-hidden">About Us</span>
+        </button>
+
+        <button 
+            style="background-image: url('Services.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('services.html')">
+            <span class="visually-hidden">Our Services</span>
+        </button>
+    </div>
+    <script>
+        function openNewSite(fileName) {
+            window.open(fileName, '_self'); 
+        }
+    </script>
+
+</body>
+</html>

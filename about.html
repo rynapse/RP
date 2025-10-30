@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rynapse - About</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    
+    
+    <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        .my-input-button {
+            box-sizing: border-box; 
+            width: 100px;
+            height: 50px;
+            
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            
+            cursor: pointer;
+            position: relative;
+
+            transition: left 0.3s ease, top 0.3s ease, box-shadow 0.3s ease; 
+            
+            box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+
+            padding: 0; 
+            border-radius: 25px; 
+            border: none;
+            
+            margin: 0 5px;
+        }
+        
+        .my-input-button:hover {
+            left: -0.15cm;
+            top: -0.15cm;
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .content-wrapper {
+            margin: 70px auto 0; 
+            max-width: 800px;
+            padding: 0 20px;
+            font-family: sans-serif; 
+            color: #333;
+            
+        }
+
+       
+        .content-wrapper h2, 
+        .content-wrapper p {
+            text-align: left; 
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .content-wrapper p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div style="text-align:center; margin-top:40px;">
+        <img style="width: 10%;" src="logo1.png" alt="Rynapse Logo">
+    </div>
+    
+    <div style="text-align:center; margin-top;">
+        <h1 style="font-size:60px; color:black; font-family:magz;"><b>Rynapse</b></h1>
+        <h2>Imagine. Illustrate. Impact.</h2>
+    </div>
+
+    <div style="text-align:center; margin-top:70px;">
+        <button 
+            style="background-image: url('Home.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('index.html')"> 
+            <span class="visually-hidden">Home Page</span>
+        </button>
+        
+        <button 
+            style="background-image: url('About.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('about.html')">
+            <span class="visually-hidden">About Us</span>
+        </button>
+
+        <button 
+            style="background-image: url('Services.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('services.html')">
+            <span class="visually-hidden">Our Services</span>
+        </button>
+    </div>
+
+    <div class="content-wrapper"> 
+        <h2><b>About Rynapse</b></h2>
+        <p>
+At Rynapse, we don't just build websites—we build digital experiences that drive results. Our philosophy is simple: Imagine. Illustrate. Impact.
+<br>
+            <br>
+            <b>Imagine:</b> We start by deeply understanding your vision, goals, and audience. We help you define what success looks like in the digital landscape.
+<br>
+            <br>
+            <b>Illustrate:</b> We then bring that vision to life through expert web design and cutting-edge development. Our designs are clean, modern, and focused on user experience.
+<br>
+            <br>
+            <b>Impact:</b> The final product is a powerful, high-performing digital asset that makes a measurable impact on your business, connecting you with your customers and scaling your growth.
+<br>
+            <br>
+We are a team of dedicated professionals committed to delivering quality, innovation, and client satisfaction in every project.
+        </p>
+        <h2><b>Our Story</b></h2>
+        <p>
+            The digital world is loud. To break through, you need more than a website—you need a <b>strategic partner.</b> That’s why <b>Rynapse</b> was founded on the belief that great design and smart technology can create true connections.
+            <br><br>
+
+            Our guiding principle is to <b>Imagine</b> the impossible, <b>Illustrate</b> a path forward, and make a lasting <b>Impact</b>.<br><Br>
+
+We specialize in transforming complex ideas into intuitive, beautiful, and functional digital realities. From the first line of code to the final visual polish, we’re obsessed with the details that turn a good project into a great one. If you’re ready to elevate your brand’s digital presence and achieve more, you’re ready for Rynapse.        </p>
+        
+        <h2><b>Who We Are</b></h2>
+        <p>
+            <B>Rynapse</B> is a full-service digital agency dedicated to helping businesses grow. We are the architects of your digital success, blending <b>creative design</b> with <b>robust development</b> to deliver powerful online platforms.  <br><br>
+
+            Our commitment is simple: <b>Imagine. Illustrate. Impact.</b><br><br>
+
+            We take the time to <b>Imagine</b> your goals, <b>Illustrate</b> the solution through superior web design, and deliver work that creates a significant, positive <b>Impact</b> on your bottom line.</p>
+    </div>
+    <script>
+        function openNewSite(fileName) {
+            window.open(fileName, '_self'); 
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rynapse - Home</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Setting the base font to Arial */
+        }
+        
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /*
+         * STYLES FOR THE IMAGE BUTTONS (UNCHANGED)
+         */
+        .my-input-button {
+            box-sizing: border-box; 
+            width: 100px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain; 
+            cursor: pointer;
+            position: relative;
+            transition: left 0.3s ease, top 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+            padding: 0; 
+            border-radius: 25px; 
+            border: none;
+            margin: 0 5px;
+        }
+        
+        .my-input-button:hover {
+            left: -0.15cm;
+            top: -0.15cm;
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5); 
+        }
+        
+        /*
+         * STYLES FOR THE MOVABLE IMAGES
+         */
+        .movable-image {
+            border-radius: 25px; 
+            border: none; 
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6);
+            position: relative; 
+            transition: left 0.3s ease, top 0.3s ease, box-shadow 0.3s ease; 
+            margin-right: 7.5px;
+            margin-left: 7.5px;
+        }
+        
+        .movable-image:hover {
+            left: -0.25cm;
+            top: -0.25cm;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7); 
+        }
+        
+        /* Font styling for Rynapse H1 */
+        .magz {
+            font-family: 'magz', Arial, sans-serif; 
+        }
+        
+        /* NEW FLEXBOX LAYOUT FOR THE TEXT */
+        .services-layout {
+            display: flex; 
+            justify-content: center; 
+            max-width: 980px; 
+            margin: 30px auto 0; /* Centering the text layout block */
+            padding: 0 10px;
+            gap: 15px; 
+        }
+
+        /* Style for each individual text column */
+        .service-column {
+            width: 50%; 
+            text-align: left;
+            padding: 0 10px; 
+        }
+
+        .service-column h2 {
+            text-align: center; /* Center heading */
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .service-column p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 0;
+            color: #333; 
+        }
+
+        /* NEW: Centering the overall image+text block by setting a max width */
+        .media-and-text-container {
+            max-width: 980px; /* Same max-width as the .services-layout for alignment */
+            margin: 0 auto; /* Centers the whole block */
+            text-align: center; /* Ensures images are centered within this block */
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div style="text-align:center; margin-top:40px;">
+        <img style="width: 10%;" src="logo1.png" alt="Rynapse Logo">
+    </div>
+    
+    <div style="text-align:center; margin-top:10px;">
+        <h1 style="font-size:60px; color:black;" class="magz">Rynapse</h1>
+        <h2>Imagine. Illustrate. Impact.</h2>
+    </div>
+
+    <div style="text-align:center; margin-top:70px;">
+        
+        <button 
+            style="background-image: url('Home1.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('index.html')"> 
+            <span class="visually-hidden">Home Page</span>
+        </button>
+        
+        <button 
+            style="background-image: url('About1.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('about.html')">
+            <span class="visually-hidden">About Us</span>
+        </button>
+
+        <button 
+            style="background-image: url('Services1.png');" 
+            class="my-input-button" 
+            type="button"
+            onclick="openNewSite('services.html')">
+            <span class="visually-hidden">Our Services</span>
+        </button>
+        
+    </div>
+    
+    <br><br><br>
+    
+    <div class="media-and-text-container">
+        
+        <div>
+            <img class="movable-image" style="width: 47.5%;" src="1 (2)1.png" alt="A descriptive image 1">
+            <img class="movable-image" style="width: 47.5%;" src="2 (2)1.png" alt="A descriptive image 2">
+        </div>
+
+        <div class="services-layout">
+            <div class="service-column">
+                <h2><b>Programming</b></h2>
+                <p>Beyond design, programming is the dedicated craft that transforms a static illustration into a dynamic, functional, and scalable digital asset. We write clean, secure, and future-proof code that serves as the invisible engine for your online success. Every line is an engineered solution, meticulously crafted to maximize user experience and deliver measurable impact for your business.</p>
+            </div>
+
+            <div class="service-column">
+                <h2><b>Design</b></h2>
+                <p>Design is the art of strategic illustration. It's the critical first step where we translate your brand's essence and your business goals into a clean, intuitive, and visually compelling experience. We obsess over aesthetics, usability, and accessibility, ensuring every pixel is placed with purpose. Our focus is on crafting designs that not only look stunning but that guide the user, build trust, and ultimately amplify the impact of your message in a crowded digital landscape.</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function openNewSite(fileName) {
+            // Opens the specified file in the current browser window/tab
+            window.open(fileName, '_self'); 
+        }
+    </script>
+
+</body>
+</html>
